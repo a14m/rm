@@ -26,6 +26,8 @@ Usage
 -
 `rm [OPTION]...FILE...`
 
+`/bin/rm [OPTION]...FILE...` to use the system rm for special cases this script don't cover
+
 ###Options
 | option      |  desc. |
 |-------------|--------|
