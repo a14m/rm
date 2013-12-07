@@ -14,9 +14,12 @@ Install
 -
 `sudo cp rm.sh /usr/local/bin/rm`
 
+you might need to restart the terminal or run `source ~/.bashrc` or `source ~/.bash_profile`
+
 Uninstall
 -
 `sudo rm /user/local/bin/rm`
+
 you might need to restart the terminal or run `source ~/.bashrc` or `source ~/.bash_profile`
 
 Usage
