@@ -102,9 +102,9 @@ function check_trash_directory()
     if $FOREVER ;then
         # use the common system rm -r passing the same arguments
         if $VERBOSE ;then
-            echo -e "`/bin/rm -r -v ${TO_DELETE[@]}`"
+            echo -e "`/bin/rm -rf -v ${TO_DELETE[@]}`"
         else
-            /bin/rm -r ${TO_DELETE[@]}
+            /bin/rm -rf ${TO_DELETE[@]}
         fi
     else
         move_to_trash
