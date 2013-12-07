@@ -54,6 +54,11 @@ function check_flags()
                 shift
                 RECURSIVE=true
                 ;;
+            -rf)
+                shift
+                RECURSIVE=true
+                FORCE=true
+                ;;
             -f|--forever)
                 shift
                 FOREVER=true
@@ -102,9 +107,9 @@ function check_trash_directory()
     if $FOREVER ;then
         # use the common system rm -r passing the same arguments
         if $VERBOSE ;then
-            echo -e "`/bin/rm -rf -v ${TO_DELETE[@]}`"
+            echo -e "`/bin/rm -r -v ${TO_DELETE[@]}`"
         else
-            /bin/rm -rf ${TO_DELETE[@]}
+            /bin/rm -r ${TO_DELETE[@]}
         fi
     else
         move_to_trash
