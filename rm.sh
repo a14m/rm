@@ -123,11 +123,7 @@ function move_to_trash()
         if [ -d $i ] && $RECURSIVE ;then
             if $FORCE ;then
                 echo -e "`mv $i ~/.Trash`">&2
-            else
-                mv $i ~/.Trash
-            fi
-
-            if $VERBOSE ;then
+            elif $VERBOSE ;then
                 echo -e "`mv -v $i ~/.Trash`"
             else
                 mv $i ~/.Trash
@@ -137,17 +133,17 @@ function move_to_trash()
         elif [ -f $i ] ;then
             if $FORCE ;then
                 echo -e "`mv $i ~/.Trash`">&2
-            else
-                mv $i ~/.Trash
-            fi
-
-            if $VERBOSE ;then
+            elif $VERBOSE ;then
                 echo -e "`mv -v $i ~/.Trash`"
             else
                 mv $i ~/.Trash
             fi
         else
-            echo -e "No such file or directory '$i'"
+            if $FORCE ;then
+                continue
+            else
+                echo -e "No such file or directory '$i'"
+            fi
         fi
     done
 }
