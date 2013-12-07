@@ -121,6 +121,12 @@ function move_to_trash()
 {
     for i in "${TO_DELETE[@]}";do
         if [ -d $i ] && $RECURSIVE ;then
+            if $FORCE ;then
+                echo -e "`mv $i ~/.Trash`">&2
+            else
+                mv $i ~/.Trash
+            fi
+
             if $VERBOSE ;then
                 echo -e "`mv -v $i ~/.Trash`"
             else
@@ -129,6 +135,12 @@ function move_to_trash()
         elif [ -d $i ] ;then
             echo -e "$i is a directory please use --recursive to remove directories and their content"
         elif [ -f $i ] ;then
+            if $FORCE ;then
+                echo -e "`mv $i ~/.Trash`">&2
+            else
+                mv $i ~/.Trash
+            fi
+
             if $VERBOSE ;then
                 echo -e "`mv -v $i ~/.Trash`"
             else
