@@ -122,19 +122,22 @@ function check_trash_directory()
 function move_to_trash()
 {
     for i in "${TO_DELETE[@]}";do
+        FILENAME=$i
+        FILENAME+="_"
+        FILENAME+=$(date +"%H_%M_%S")
         if [ -d $i ] && $RECURSIVE ;then
             if $VERBOSE ;then
-                echo -e "`mv -v $i ~/.Trash`"
+                echo -e "`mv -v $i ~/.Trash/$FILENAME`"
             else
-                mv $i ~/.Trash
+                mv $i ~/.Trash/$FILENAME
             fi
         elif [ -d $i ] ;then
             echo -e "$i is a directory please use --recursive to remove directories and their content"
         elif [ -f $i ] ;then
             if $VERBOSE ;then
-                echo -e "`mv -v $i ~/.Trash`"
+                echo -e "`mv -v $i ~/.Trash/$FILENAME`"
             else
-                mv $i ~/.Trash
+                mv $i ~/.Trash/$FILENAME
             fi
         else
             # TODO add other option similar to rm -f to not output this error
