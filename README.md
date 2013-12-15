@@ -3,10 +3,22 @@ rm
 
 since you've reached this page,I assume you did the same bad thing I did before.
 
-after using `rm very_important_file` you can't figure out how to retrieve the file.
+after using `rm very_important_file` you can't figure out how to retrieve that file.
 I'm not sure how to retrive that file, but I came to write this to avoid doing the same stupid mistake ever again.
 
 you can thank me later :D
+
+
+This is custom script used to avoid deleting files forever instead files will be moved to /Users/user_name/.Trash folder
+
+This script **only works if you invoked it directly from the terminal** `rm file`
+
+**it doesn't work if any script used `rm some_file` or if you used `rm` in other scripts**
+
+and this is done for your own safety, but if you need it to work with other scripts,
+
+please feel free to contact me and i'll instruct you on how to enable that
+
 
 -----
 
@@ -18,7 +30,7 @@ you might need to restart the terminal or run `source ~/.bashrc` or `source ~/.b
 
 Uninstall
 -
-`sudo rm /user/local/bin/rm`
+`sudo rm /usr/local/bin/rm`
 
 you might need to restart the terminal or run `source ~/.bashrc` or `source ~/.bash_profile`
 
