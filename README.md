@@ -34,6 +34,10 @@ Uninstall
 
 you might need to restart the terminal or run `source ~/.bashrc` or `source ~/.bash_profile`
 
+**please make sure that local/bin PATH before /bin PATH**
+
+add `export PATH="/usr/local/bin:$PATH"` to `.bash_profile` or `.bashrc` to achive this
+
 Usage
 -
 `rm [OPTION]...FILE...`
