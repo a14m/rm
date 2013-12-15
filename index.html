@@ -44,8 +44,9 @@ I'm not sure how to retrive that file, but I came to write this to avoid doing t
 
 <p><strong>it doesn't work if any script used <code>rm some_file</code> or if you used <code>rm</code> in other scripts</strong></p>
 
-<p>and this is done for your own safety, but if you need it to work with other scripts,
-please feel free to contact me and i'll instruct you on how to enable that</p>
+<p>and this is done for your own safety, but if you need it to work with other scripts,</p>
+
+<p>please feel free to contact me and i'll instruct you on how to enable that</p>
 
 <hr><h2>
 <a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
@@ -60,6 +61,10 @@ please feel free to contact me and i'll instruct you on how to enable that</p>
 <p><code>sudo rm /usr/local/bin/rm</code></p>
 
 <p>you might need to restart the terminal or run <code>source ~/.bashrc</code> or <code>source ~/.bash_profile</code></p>
+
+<p><strong>please make sure that local/bin PATH before /bin PATH</strong></p>
+
+<p>add <code>export PATH="/usr/local/bin:$PATH"</code> to <code>.bash_profile</code> or <code>.bashrc</code> to achive this</p>
 
 <h2>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
@@ -79,7 +84,7 @@ please feel free to contact me and i'll instruct you on how to enable that</p>
 <tbody>
 <tr>
 <td><code>-h,--help</code></td>
-<td>display this help text and exit.</td>
+<td>display help text and exit.</td>
 </tr>
 <tr>
 <td><code>--version</code></td>
