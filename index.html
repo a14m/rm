@@ -33,10 +33,19 @@
 
 <p>since you've reached this page,I assume you did the same bad thing I did before.</p>
 
-<p>after using <code>rm very_important_file</code> you can't figure out how to retrieve the file.
+<p>after using <code>rm very_important_file</code> you can't figure out how to retrieve that file.
 I'm not sure how to retrive that file, but I came to write this to avoid doing the same stupid mistake ever again.</p>
 
 <p>you can thank me later :D</p>
+
+<p>This is custom script used to avoid deleting files forever instead files will be moved to /Users/user_name/.Trash folder</p>
+
+<p>This script <strong>only works if you invoked it directly from the terminal</strong> <code>rm file</code></p>
+
+<p><strong>it doesn't work if any script used <code>rm some_file</code> or if you used <code>rm</code> in other scripts</strong></p>
+
+<p>and this is done for your own safety, but if you need it to work with other scripts,
+please feel free to contact me and i'll instruct you on how to enable that</p>
 
 <hr><h2>
 <a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
@@ -48,7 +57,7 @@ I'm not sure how to retrive that file, but I came to write this to avoid doing t
 <h2>
 <a name="uninstall" class="anchor" href="#uninstall"><span class="octicon octicon-link"></span></a>Uninstall</h2>
 
-<p><code>sudo rm /user/local/bin/rm</code></p>
+<p><code>sudo rm /usr/local/bin/rm</code></p>
 
 <p>you might need to restart the terminal or run <code>source ~/.bashrc</code> or <code>source ~/.bash_profile</code></p>
 
