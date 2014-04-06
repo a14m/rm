@@ -1,23 +1,19 @@
 rm
 ==
 
-since you've reached this page,I assume you did the same bad thing I did before.
+Since you've reached this page, I assume you did the same bad thing I did before. After using `rm very_important_file` and later realize that you can't retrieve that file.
 
-after using `rm very_important_file` you can't figure out how to retrieve that file.
-I'm not sure how to retrive that file, but I came to write this to avoid doing the same stupid mistake ever again.
+I'm not sure how to retrieve that file, but I came to write this to avoid doing the same stupid mistake ever again.
 
-you can thank me later :D
+You can thank me later :D
 
-
-This is custom script used to avoid deleting files forever instead files will be moved to /Users/user_name/.Trash folder
+This is a custom script used to avoid deleting files forever and instead files will be moved to /Users/user_name/.Trash folder
 
 This script **only works if you invoked it directly from the terminal** `rm file`
 
 **it doesn't work if any script used `rm some_file` or if you used `rm` in other scripts**
 
-and this is done for your own safety, but if you need it to work with other scripts,
-
-please feel free to contact me and i'll instruct you on how to enable that
+and this is done for your own safety, but if you need it to work with other scripts, please feel free to contact me and I'll instruct you on how to enable that.
 
 
 -----
@@ -42,7 +38,7 @@ Usage
 -
 `rm [OPTION]...FILE...`
 
-`/bin/rm [OPTION]...FILE...` to use the system rm for special cases this script don't cover
+`/bin/rm [OPTION]...FILE...` to use the system rm for special cases this script doesn't cover
 
 ###Options
 | option      |  desc. |
@@ -50,7 +46,7 @@ Usage
 | `-h,--help` | display this help text and exit. |
 | `--version` | output version information and exit. |
 | `-r, -R, --recursive` | **move** the directories and their content to the Trash folder. |
-| `-f, --forever` | **remove** the directories and their content to the Trash folder ( what you did :D ).|
+| `-f, --forever` | **remove** the directories and their content permanently (will use the system rm).|
 
 Bugs
 -
