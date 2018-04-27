@@ -40,13 +40,14 @@ Usage
 
 `/bin/rm [OPTION]...FILE...` to use the system rm for special cases this script doesn't cover
 
-###Options
-| option      |  desc. |
-|-------------|--------|
-| `-h,--help` | display this help text and exit. |
-| `--version` | output version information and exit. |
+### Options
+
+| option                |  desc.                           |
+| :-------------------- | :------------------------------- |
+| `-h,--help`           | display this help text and exit. |
+| `--version`           | output version information and exit. |
 | `-r, -R, --recursive` | **move** the directories and their content to the Trash folder. |
-| `-f, --forever` | **remove** the directories and their content permanently (will use the system rm).|
+| `-f, --forever`       | **remove** the directories and their content permanently (will use the system rm).|
 
 Bugs
 -
